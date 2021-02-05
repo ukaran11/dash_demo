@@ -45,11 +45,11 @@ export class ChartEditComponent implements OnInit {
   }
 
   addTitle(title: String){
-    this.store.dispatch(new WidgetActions.AddTitle({title:title}));
+    this.store.dispatch(new WidgetActions.AddTitle(title));
   }
 
   addSubtitle(subtitle:String){
-    this.store.dispatch(new WidgetActions.AddSubtitle({subtitle:subtitle}));
+    this.store.dispatch(new WidgetActions.AddSubtitle(subtitle));
   }
   
   // TitleChange(title){

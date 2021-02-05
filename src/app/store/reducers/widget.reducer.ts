@@ -11,31 +11,31 @@ const initialState: Widget = {
     position:''
 };
 
-export function reducer(state: Widget[] = [initialState], action: WidgetActions.Actions) {
+export function reducer(state: Widget = initialState, action: WidgetActions.Actions) {
     switch(action.type) {
         case WidgetActions.ADD_WIDGET:
-            return [...state, action.payload];
+            return {...state, title:action.payload};
 
         case WidgetActions.ADD_TITLE:
-            return [...state];
+            return {...state, title:action.payload};
 
         case WidgetActions.ADD_SUBTITLE:
-            return [...state];
+            return {...state, subtitle:action.payload};
         
         case WidgetActions.ADD_LEGEND:
-            return [...state, action.payload];
+            return {...state, title:action.payload};
         
         case WidgetActions.ADD_CAPTION:
-            return [...state, action.payload];
+            return {...state, title:action.payload};
 
         case WidgetActions.ADD_THICKNESS:
-            return [...state, action.payload];
+            return {...state, title:action.payload};
         
         case WidgetActions.ADD_POSITION:
-            return [...state, action.payload];
+            return {...state, title:action.payload};
 
         case WidgetActions.REMOVE_WIDGET:
-            state.splice(action.payload, 1)
+            return {...state, title:action.payload};
             return state;
         default:
             return state;
