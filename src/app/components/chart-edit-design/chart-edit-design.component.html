@@ -1,0 +1,47 @@
+<br>
+<!-- <div class="row">
+    <div class="col">
+        <mat-label for="selectLegendPosition">Legend</mat-label>
+        <mat-select class="form-control" [(ngModel)]="selectedLegendPosition" name="legendPosition">
+            <mat-option value selected disabled>Select</mat-option>
+            <mat-option value="top">Top</mat-option>
+            <mat-option value="left">Left</mat-option>
+            <mat-option value="right">Right</mat-option>
+            <mat-option value="bottom">Bottom</mat-option>
+        </mat-select>
+    </div>
+</div> -->
+<br>
+
+<!-- <div class="row">
+    <div class="col" *ngIf="selectedChartType === 'line'">
+        <mat-form-field appearance="fill">
+        <mat-label for="legendPosition">Legend Position</mat-label>
+        <mat-select class="form-control" [(ngModel)]="legendPosition" name="legendPosition">
+            <mat-option value selected disabled>Select</mat-option>
+            <mat-option value="VerticalRightTop">Vertical Right Top</mat-option>
+            <mat-option value="VerticalRightBottom">Vertical Right Bottom</mat-option>
+            <mat-option value="VerticalLeftTop">Vertical Left Top</mat-option>
+            <mat-option value="VerticalLeftBottom">Vertical Left Bottom</mat-option>
+            <mat-option value="HorizontalRightTo">Horizontal Right Top</mat-option>
+            <mat-option value="HorizontalRightBottom">Horizontal Right Bottom</mat-option>
+            <mat-option value="HorizontalLeftTop">Horizontal Left Top</mat-option>
+            <mat-option value="HorizontalLeftBottom">Horizontal Left Bottom</mat-option>
+        </mat-select>
+        </mat-form-field>
+    </div>
+</div> -->
+<br>
+<mat-divider></mat-divider>
+
+
+<br>
+<mat-slide-toggle (click)="exportToggle()">Export</mat-slide-toggle>
+    <input matInput type="text" [(ngModel)]="export" *ngIf="isExportToggled">
+<br>
+<mat-divider></mat-divider>
+
+<button class="btn btn-primary"
+         >
+        Submit
+        </button>

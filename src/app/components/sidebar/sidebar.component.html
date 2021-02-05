@@ -1,0 +1,13 @@
+<mat-sidenav-container class="example-container">
+    <mat-sidenav mode="side" opened>Sidenav
+        <app-chart-edit (legendEditForMe)="legendEditor($event)"></app-chart-edit>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        
+        <app-chart-area [title]="title"></app-chart-area>
+    </mat-sidenav-content>
+    <mat-sidenav opened mode="side" position="end">Design
+        <!-- <app-chart-edit-design></app-chart-edit-design> -->
+    </mat-sidenav>
+    
+  </mat-sidenav-container>

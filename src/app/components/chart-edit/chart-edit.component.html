@@ -1,0 +1,74 @@
+<div class="form-group">
+<div class="row">
+    <div class="column">
+        <mat-form-field appearance="fill">
+        <mat-label>Select the chart type</mat-label>
+        <mat-select class="form-control" [(ngModel)]="selectedChartType" name="selectedChartType">
+            <mat-option value selected disabled>Select</mat-option>>
+            <mat-option *ngFor="let ct of selectChartType" [value]="ct.value">{{ct.displayName}}</mat-option>
+        </mat-select>
+        </mat-form-field>
+</div>
+</div>
+<div class="row">
+    <div class="col-md-4" *ngIf="selectedChartType === 'line'">
+        <mat-form-field appearance="fill">
+        <mat-label for="lineThickness">Line thickness</mat-label>
+        <mat-select class="form-control" [(ngModel)]="lineThickness" name="lineThickness">
+            <mat-option value selected disabled>Select</mat-option>
+            <mat-option value="1">1</mat-option>
+            <mat-option value="2">2</mat-option>
+            <mat-option value="3">3</mat-option>
+            <mat-option value="4">4</mat-option>
+            <mat-option value="5">5</mat-option>
+            <mat-option value="6">6</mat-option>
+            <mat-option value="7">7</mat-option>
+            <mat-option value="8">8</mat-option>
+        </mat-select>
+        </mat-form-field>
+    </div>
+</div>
+
+
+<mat-divider></mat-divider>
+<button mat-raised-button (click)="legendEdit()">Basic</button>
+<br>
+<label name="Title">Title</label>
+<input matInput type="text" [(ngModel)]="title" >
+<br>
+<mat-divider></mat-divider>
+
+<br>
+<label name="Subtitle">Subtitle</label>
+<input matInput type="text" [(ngModel)]="subtitle">
+<br>
+<mat-divider></mat-divider>
+
+<br>
+<mat-slide-toggle (click)="captionToggle()">Caption</mat-slide-toggle>
+    <input matInput type="text" *ngIf="isCaptionToggled"  [(ngModel)]="caption">
+<br>
+<mat-divider></mat-divider>
+
+<br>
+<button mat-raised-button>X Axis</button>
+<br>
+<mat-divider></mat-divider>
+
+<br>
+<button mat-raised-button>Y Axis</button>
+<br>
+<mat-divider></mat-divider>
+
+<div class="row">
+    <div class="col-md-4"  *ngIf="selectedChartType === 'bar'">
+        <label for="stacked">Stacked: </label>
+        <input class="form-check-input checkbox" type="checkbox" name="stacked" [(ngModel)]="stacked">
+    </div>
+    <div class="col-md-4"  *ngIf="selectedChartType === 'line'">
+        <label for="isStraightLine">Straight Line: </label>
+        <input class="form-check-input checkbox" type="checkbox" name="isStraightLine" [(ngModel)]="isStraightLine">
+    </div>
+</div>
+<mat-divider></mat-divider>
+</div>
